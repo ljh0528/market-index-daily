@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>市场指数日报</title>
+  <meta name="description" content="上证指数、沪深300、创业板指的每交易日行情汇总">
+  <title>市场指数日报 · 2026-11-13</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>市场指数日报</h1>
   <p class="date">2026-11-13 收盘</p>
+
+  <p class="summary">当日三大指数全线收跌，跌幅最大的是创业板指（-3.32%）。年初至今创业板指累计回落 26.36%，幅度最深。</p>
+
+  <div class="cards">
+    <div class="card"><div class="name">上证指数</div><div class="value down">-0.59%</div><div class="sub">收盘 3634.35</div></div>
+<div class="card"><div class="name">创业板指</div><div class="value down">-3.32%</div><div class="sub">收盘 2426.08</div></div>
+<div class="card"><div class="name">沪深300</div><div class="value down">-0.68%</div><div class="sub">收盘 4016.29</div></div>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -17,16 +27,24 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>上证指数</td><td>3634.35</td><td>-0.59%</td><td>-2.20%</td><td>-9.67%</td><td>1.00</td></tr>
-<tr><td>创业板指</td><td>2426.08</td><td>-3.32%</td><td>-12.49%</td><td>-26.36%</td><td>0.94</td></tr>
-<tr><td>沪深300</td><td>4016.29</td><td>-0.68%</td><td>-3.70%</td><td>-14.87%</td><td>0.95</td></tr>
+      <tr><td>上证指数</td><td>3634.35</td><td class="down">-0.59%</td><td class="down">-2.20%</td><td class="down">-9.67%</td><td>1.00</td></tr>
+<tr><td>创业板指</td><td>2426.08</td><td class="down">-3.32%</td><td class="down">-12.49%</td><td class="down">-26.36%</td><td>0.94</td></tr>
+<tr><td>沪深300</td><td>4016.29</td><td class="down">-0.68%</td><td class="down">-3.70%</td><td class="down">-14.87%</td><td>0.95</td></tr>
     </tbody>
-    <p>过去一年三大指数均在下跌区间，创业板指跌幅最深（约 22.6%），上证指数相对抗跌（约 8.2%）。当日三大指数全线收跌，创业板指跌 3.32%，波动明显大于主板。</p>
   </table>
-  <section>
+
+  <figure>
     <img src="img/trend.png" alt="三大指数近一年走势">
+    <figcaption>近 250 个交易日走势，起点归一化为 100</figcaption>
+  </figure>
+
+  <figure>
     <img src="img/bar.png" alt="当日涨跌幅">
-  </section>
-  <footer>数据来源：新浪财经 · 最后生成：2026-11-13 18:02</footer>
+    <figcaption>2026-11-13 当日涨跌幅，红涨绿跌</figcaption>
+  </figure>
+
+  <footer>
+    数据来源：新浪财经 · 最后生成：2026-11-17 12:31
+  </footer>
 </body>
 </html>

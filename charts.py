@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 import matplotlib.dates as mdates
-plt.rcParams['font.sans-serif']=['SimHei']
+# 三个字体按顺序找，Windows 用前两个，Linux（GitHub Actions）用最后一个
+plt.rcParams['font.sans-serif']=['Microsoft YaHei','SimHei','Noto Sans CJK SC']
 plt.rcParams['axes.unicode_minus']=False
 data1=pd.read_csv('data/raw/上证指数_sh000001.csv')
 data2=pd.read_csv("data/raw/创业板指_sz399006.csv")
@@ -37,7 +38,7 @@ fig,ax=plt.subplots(figsize=(12,6))
 for name,df in dict1.items():
     ax.plot(df['date'],df['norm'],label=name)
 ax.axhline(y=100,color='gray',linestyle='--')
-ax.set_title("三大指数近一年走势")
+ax.set_title("三大指数近一年走势（起点 = 100）")
 ax.set_ylabel("相对起点")
 ax.legend()
 ax.grid(alpha=0.3)
@@ -52,7 +53,7 @@ values=[i for i in columns_frame['当日%']]
 names=[i for i in columns_frame['指数']]
 print(values)
 print(names)
-colors=["#d62728" if v>=0 else "#2ca02c" for v in values]
+colors=["#d1242f" if v>=0 else "#1a7f37" for v in values]
 fig,ax=plt.subplots(figsize=(8,3.5))
 bars=ax.barh(names,values,color=colors,height=0.5)
 ax.axvline(x=0,color='black',linewidth=0.8)
@@ -62,6 +63,6 @@ lo=min(min(values),0)
 hi=max(max(values),0)
 pad=(hi-lo)*0.12
 ax.set_xlim(lo-pad,hi+pad)
-ax.set_title("当日涨跌幅（2026-11-13）")
+ax.set_title(f"当日涨跌幅（{columns_frame['日期'].iloc[0]}）")
 fig.tight_layout()
 fig.savefig('docs/img/bar.png',dpi=300)
