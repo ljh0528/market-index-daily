@@ -1,0 +1,8 @@
+body { max-width: 900px; margin: 40px auto; padding: 0 20px;
+       font-family: "Microsoft YaHei", system-ui, sans-serif; color: #333; }
+h1 { font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 10px; border-bottom: 1px solid #eee; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+img { width: 100%; margin: 16px 0; }
+footer { color: #999; font-size: 13px; margin-top: 40px; }
